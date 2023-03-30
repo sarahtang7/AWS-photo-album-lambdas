@@ -7,8 +7,14 @@ phases:
       - echo "Zipping index-photos deployment package..."
       - zip -r9 ../indexphotos_deployment_package.zip .
       - cd ..
+      - echo "Zipping search-photos deployment package..."
+      - cd search-photos
+      - zip -r9 ../searchphotos_deployment_package.zip .
+      - cd ..
+
   post_build:
     commands:
       - echo "Deploying index-photos lambda function..."
       - aws lambda update-function-code --function-name index-photos --region us-east-1 --zip-file fileb://indexphotos_deployment_package.zip
-      - echo "DONE!!"
+      - echo "Deploying search-photos lambda function..."
+      - aws lambda update-function-code --function-name search-photos --region us-east-1 --zip-file fileb://searchphotos_deployment_package.zip
