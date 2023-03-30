@@ -15,7 +15,6 @@ region = 'us-east-1'
 
 service = 'es'
 credentials = boto3.Session().get_credentials()
-#print(credentials.access_key, credentials.secret_key)
 awsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service, session_token=credentials.token)
 
 client = OpenSearch(
