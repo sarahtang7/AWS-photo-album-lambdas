@@ -8,7 +8,6 @@ import re
 import requests
 from requests_aws4auth import AWS4Auth
 from opensearchpy import OpenSearch, RequestsHttpConnection, AWSV4SignerAuth
-#import String
 
 host = 'https://search-photos2-iso42y4zytwc3luoezg7cfftpe.us-east-1.es.amazonaws.com'
 HOST = 'search-photos2-iso42y4zytwc3luoezg7cfftpe.us-east-1.es.amazonaws.com'
