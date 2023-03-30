@@ -71,7 +71,7 @@ def get_custom_labels(bucket, key):
 
     
 def lambda_handler(event, context):
-    print("testing pipeline")
+    print("pipeline is sending changes!!!")
     print(json.dumps(event))
     
     for r in event['Records']:
