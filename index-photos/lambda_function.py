@@ -127,7 +127,6 @@ def lambda_handler(event, context):
         headers = { "Content-Type": "application/json" }
         url = 'https://search-photos2-iso42y4zytwc3luoezg7cfftpe.us-east-1.es.amazonaws.com/photos/_doc'
         req = requests.post(url, auth=awsauth, data=json.dumps(entry), headers=headers)
-        #print("error reason:", req.text)
         print("Success: ", req, req.text)
         
     return {
