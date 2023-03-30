@@ -6,6 +6,7 @@ phases:
       - cd index-photos
       - echo "Zipping index-photos deployment package..."
       - zip -r9 ../indexphotos_deployment_package.zip .
+      - cd ..
   post_build:
     commands:
       - echo "Deploying index-photos lambda function..."
