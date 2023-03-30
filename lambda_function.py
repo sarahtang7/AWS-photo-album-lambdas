@@ -10,8 +10,6 @@ from requests_aws4auth import AWS4Auth
 from opensearchpy import OpenSearch, RequestsHttpConnection, AWSV4SignerAuth
 #import String
 
-#change
-
 host = 'https://search-photos2-iso42y4zytwc3luoezg7cfftpe.us-east-1.es.amazonaws.com'
 HOST = 'search-photos2-iso42y4zytwc3luoezg7cfftpe.us-east-1.es.amazonaws.com'
 region = 'us-east-1'
