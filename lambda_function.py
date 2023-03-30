@@ -96,10 +96,11 @@ def lambda_handler(event, context):
             sing_label = inflection.singularize(label['Name']).lower()
             #print(sing_label)
             labels.append(sing_label)
-        for label in custom_labels:
-            sing_label = inflection.singularize(label).lower()
-            if(sing_label not in labels):
-                labels.append(sing_label)
+        if(custom_labels != None):
+            for label in custom_labels:
+                sing_label = inflection.singularize(label).lower()
+                if(sing_label not in labels):
+                    labels.append(sing_label)
       
       
         '''
