@@ -1,0 +1,11 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo "Zipping deployment package..."
+      - zip -r9 deployment_package.zip .
+  post_build:
+    commands:
+      - echo "Updating lambda Function..."
+      - aws lambda update-function-code --function-name index-photos --region us-east-1 --zip-file fileb://deployment_package.zip
+      - echo "DONE!!"
