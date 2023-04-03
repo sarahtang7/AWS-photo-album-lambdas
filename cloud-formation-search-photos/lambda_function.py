@@ -17,9 +17,11 @@ awsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, servi
 bucket_url = 'https://s3.amazonaws.com/cf-photos-bucket-2/'
 
 def get_imgs(label):
-    search_url = 'https://search-cf-photos-hnsoyvkb5haubxfwsuex2pkgui.us-east-1.es.amazonaws.com/photos/_search?q='
+    search_url = 'https://search-cf-photos-hnsoyvkb5haubxfwsuex2pkgui.us-east-1.es.amazonaws.com/photos/_search'
     print('label:', label)
-    url = search_url + label
+    url = search_url
+    if(label != 'all'):
+        url = search_url + '?q=' + label
     resp = requests.get(url, auth=awsauth)
     return resp.text
         
@@ -94,7 +96,9 @@ def lambda_handler(event, context):
     return {
         'statusCode': 200,
         'headers': {
-            "Access-Control-Allow-Origin": "*",
+            'Access-Control-Allow-Headers': '*',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': '*',
             'Content-Type': 'application/json'
         },
         'body': json.dumps({"images": img_urls})
