@@ -26,7 +26,7 @@ def get_imgs(label):
     return resp.text
         
 def lambda_handler(event, context):
-    print("testing codepipeline & search-photos")
+    print("testing pipeline to redeployed CF lambda functions! (search photos)")
     img_urls = []
     
     # testing display on front-end

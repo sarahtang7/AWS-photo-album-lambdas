@@ -15,6 +15,6 @@ phases:
   post_build:
     commands:
       - echo "Deploying index-photos lambda function..."
-      - aws lambda update-function-code --function-name cf-index-photos --region us-east-1 --zip-file fileb://indexphotos_deployment_package.zip
+      - aws lambda update-function-code --function-name cf-index-photos-redeploy --region us-east-1 --zip-file fileb://indexphotos_deployment_package.zip
       - echo "Deploying search-photos lambda function..."
-      - aws lambda update-function-code --function-name cf-search-photos --region us-east-1 --zip-file fileb://searchphotos_deployment_package.zip
+      - aws lambda update-function-code --function-name cf-search-photos-redeploy --region us-east-1 --zip-file fileb://searchphotos_deployment_package.zip
