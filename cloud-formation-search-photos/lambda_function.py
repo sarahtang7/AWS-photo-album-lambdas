@@ -101,5 +101,6 @@ def lambda_handler(event, context):
             'Access-Control-Allow-Methods': '*',
             'Content-Type': 'application/json'
         },
-        'body': json.dumps({"images": img_urls})
+        'body': json.dumps(img_urls)
+        #'body': json.dumps({"images": img_urls})
     }
