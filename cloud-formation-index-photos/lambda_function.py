@@ -9,7 +9,7 @@ import requests
 from requests_aws4auth import AWS4Auth
 from opensearchpy import OpenSearch, RequestsHttpConnection, AWSV4SignerAuth
 
-host = 'search-cf-photos-hnsoyvkb5haubxfwsuex2pkgui.us-east-1.es.amazonaws.com'
+host = 'search-cf-photos-redeploy-puknyz3xbvaorschv2rlmuj2lm.us-east-1.es.amazonaws.com'
 region = 'us-east-1'
 
 service = 'es'

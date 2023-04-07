@@ -17,7 +17,7 @@ awsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, servi
 bucket_url = 'https://s3.amazonaws.com/cf-photos-bucket-2/'
 
 def get_imgs(label):
-    search_url = 'https://search-cf-photos-hnsoyvkb5haubxfwsuex2pkgui.us-east-1.es.amazonaws.com/photos/_search'
+    search_url = 'https://search-cf-photos-redeploy-puknyz3xbvaorschv2rlmuj2lm.us-east-1.es.amazonaws.com/_search'
     print('label:', label)
     url = search_url
     if(label != 'all'):
